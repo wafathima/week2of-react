@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
-import { useParams, useNavigate,Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { BlogContext } from "../context/BlogContext";
-
+import { Link } from "react-router-dom";
 
 function BlogDetail(){
     const {id} = useParams();
@@ -9,7 +9,7 @@ function BlogDetail(){
     const blog = blogs.find(b=> b.id === Number(id))
     const navigate = useNavigate();
 
-    if (!blog) return <p>Blog not found</p>
+    if (!blog) return <p>Blog not fount</p>
 
     return (
         <div>
@@ -20,4 +20,4 @@ function BlogDetail(){
         </div>
     )
 }
-export default BlogDetail;
+export default BlogDetail
